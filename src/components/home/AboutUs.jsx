@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Collapse } from 'react-bootstrap';
+import teamImg from '../../assets/images/Team-Bild.jpg';
+import robinImg from '../../assets/images/Robin_Portait_website.png';
+import patrickImg from '../../assets/images/Patrick_Portait_website.png';
+import nikoImg from '../../assets/images/Niko_Potrait_website.png';
 
 const AboutUs = () => {
   const [open, setOpen] = useState(false);
@@ -9,9 +13,12 @@ const AboutUs = () => {
       <Container>
         <Row className="align-items-center">
           <Col lg={6} className="mb-4 mb-lg-0">
-            <div className="bg-light p-5 rounded shadow text-center">
-              <i className="bi bi-people-fill text-primary" style={{ fontSize: '5rem' }}></i>
-              <p className="mt-3 text-muted">Team-Bild wird hier angezeigt</p>
+            <div className="rounded shadow overflow-hidden">
+              <img 
+                src={teamImg} 
+                alt="Mitra Sanitär Team" 
+                className="img-fluid w-100" 
+              />
             </div>
           </Col>
           <Col lg={6}>
@@ -39,8 +46,8 @@ const AboutUs = () => {
             <Row className="mb-5">
               <Col md={4} className="mb-4 mb-md-0 text-center">
                 <div className="team-member">
-                  <div className="bg-light rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style={{ width: '200px', height: '200px', overflow: 'hidden' }}>
-                    <i className="bi bi-person-fill text-primary" style={{ fontSize: '5rem' }}></i>
+                  <div className="rounded-circle mx-auto mb-3 overflow-hidden" style={{ width: '200px', height: '200px' }}>
+                    <img src={robinImg} alt="Robin" className="img-fluid" />
                   </div>
                   <h3 className="mb-3">Robin</h3>
                   <p className="text-muted">
@@ -51,8 +58,8 @@ const AboutUs = () => {
 
               <Col md={4} className="mb-4 mb-md-0 text-center">
                 <div className="team-member">
-                  <div className="bg-light rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style={{ width: '200px', height: '200px', overflow: 'hidden' }}>
-                    <i className="bi bi-person-fill text-primary" style={{ fontSize: '5rem' }}></i>
+                  <div className="rounded-circle mx-auto mb-3 overflow-hidden" style={{ width: '200px', height: '200px' }}>
+                    <img src={patrickImg} alt="Patrick" className="img-fluid" />
                   </div>
                   <h3 className="mb-3">Patrick</h3>
                   <p className="text-muted">
@@ -63,8 +70,8 @@ const AboutUs = () => {
 
               <Col md={4} className="mb-4 mb-md-0 text-center">
                 <div className="team-member">
-                  <div className="bg-light rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style={{ width: '200px', height: '200px', overflow: 'hidden' }}>
-                    <i className="bi bi-person-fill text-primary" style={{ fontSize: '5rem' }}></i>
+                  <div className="rounded-circle mx-auto mb-3 overflow-hidden" style={{ width: '200px', height: '200px' }}>
+                    <img src={nikoImg} alt="Niko" className="img-fluid" />
                   </div>
                   <h3 className="mb-3">Niko</h3>
                   <p className="text-muted">

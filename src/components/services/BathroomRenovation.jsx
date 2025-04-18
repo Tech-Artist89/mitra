@@ -72,6 +72,18 @@ const BathroomRenovation = () => {
         <Row className="justify-content-center mb-5">
           <Col lg={10}>
             <div className="position-relative">
+              {/* Timeline Linie als separates Element */}
+              <div className="timeline-line" style={{
+                position: 'absolute',
+                width: '6px',
+                backgroundColor: 'var(--color-warning)',
+                top: 0,
+                bottom: 0,
+                left: '50%',
+                marginLeft: '-3px',
+                zIndex: 0
+              }}></div>
+              
               <div className="timeline">
                 {renovationSteps.map((step, index) => (
                   <div 
@@ -81,9 +93,33 @@ const BathroomRenovation = () => {
                     data-aos-delay={index * 100}
                     data-aos-duration="800"
                   >
-                    <div className="bg-white p-4 rounded shadow-sm">
+                    {/* Timeline-Punkt als separates Element */}
+                    <div 
+                      className="timeline-dot"
+                      style={{
+                        position: 'absolute',
+                        width: '25px',
+                        height: '25px',
+                        [index % 2 === 0 ? 'right' : 'left']: '-12px',
+                        backgroundColor: 'var(--color-primary)',
+                        border: '4px solid var(--color-warning)',
+                        top: '20px',
+                        borderRadius: '50%',
+                        zIndex: 2,
+                        transition: 'all 0.3s ease'
+                      }}
+                    ></div>
+                    
+                    <div className="bg-white p-4 rounded shadow-sm timeline-card">
                       <div className="d-flex align-items-center mb-3">
-                        <div className="bg-warning rounded-circle p-2 me-3 text-center" style={{ width: '50px', height: '50px' }}>
+                        <div className="rounded-circle p-2 me-3 text-center" 
+                             style={{ 
+                               width: '50px', 
+                               height: '50px', 
+                               backgroundColor: 'var(--color-warning)',
+                               position: 'relative',
+                               zIndex: 3 
+                             }}>
                           <i className={`${step.icon} fs-4 text-dark`}></i>
                         </div>
                         <h4 className="mb-0">{step.title}</h4>

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Container, Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
+import logo from '../../assets/images/Logo-Website2.png';
 
 const Navbar = () => {
   return (
     <BootstrapNavbar bg="dark" variant="dark" expand="lg" className="py-3">
       <Container>
         <Link to="/" className="navbar-brand d-flex align-items-center">
-          <i className="bi bi-droplet-fill text-warning fs-2 me-2"></i>
-          <span className="ms-2 fs-4">MITRA</span>
+          <img src={logo} alt="Mitra Sanitär Logo" height="40" />
         </Link>
         
         <BootstrapNavbar.Toggle aria-controls="navbar-nav" />
